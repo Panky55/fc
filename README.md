@@ -1,4 +1,4 @@
-# flycast_rickroll
+# flycast
 
 A new Flutter project.
 
