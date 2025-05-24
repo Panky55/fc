@@ -8,13 +8,13 @@ class VideoScreen extends StatefulWidget {
 
 class _VideoScreenState extends State<VideoScreen> {
   late VideoPlayerController _controller;
-
   @override
   void initState() {
     super.initState();
     _controller = VideoPlayerController.asset('assets/video.mp4')
       ..initialize().then((_) {
         setState(() {});
+        _controller.setPlaybackSpeed(2.0);
         _controller.play();
       });
   }
