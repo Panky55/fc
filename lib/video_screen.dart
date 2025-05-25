@@ -14,7 +14,7 @@ class _VideoScreenState extends State<VideoScreen> {
     _controller = VideoPlayerController.asset('assets/video.mp4')
       ..initialize().then((_) {
         setState(() {});
-        _controller.setPlaybackSpeed(2.0);
+        _controller.setPlaybackSpeed(2.5);
         _controller.play();
       });
   }
