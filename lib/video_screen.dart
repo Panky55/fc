@@ -24,17 +24,19 @@ class _VideoScreenState extends State<VideoScreen> {
     _controller.dispose();
     super.dispose();
   }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       body: Center(
         child: _controller.value.isInitialized
             ? AspectRatio(
                 aspectRatio: _controller.value.aspectRatio,
                 child: VideoPlayer(_controller),
               )
-            : CircularProgressIndicator(),
+            : CircularProgressIndicator(
+                color: Colors.white,
+              ),
       ),
     );
   }
